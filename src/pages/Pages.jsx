@@ -229,7 +229,7 @@ function TeamCard2({ member, idx }) {
 export function Projects() {
   const tabs = [
     { id: 'warangal', label: 'Warangal Highway' },
-    { id: 'fourthcity', label: 'My City 4th City' },
+    { id: 'fourthcity', label: 'My City’s 4th City' },
     { id: 'ExitNo12', label: 'Completed Projects' },
   ]
   const [activeTab, setActiveTab] = useState('warangal')
@@ -305,7 +305,7 @@ export function Projects() {
 export function Gallery() {
   const [filter, setFilter] = useState('all')
   const [lightbox, setLightbox] = useState(null)
-  const filters = ['all', 'ventures', 'villas']
+  const filters = ['all', 'ventures', 'villas', 'nidhi']
   const visible = filter === 'all' ? GALLERY_ITEMS : GALLERY_ITEMS.filter(i => i.cat === filter)
 
   return (
@@ -318,7 +318,7 @@ export function Gallery() {
             {filters.map((f) => (
               <button key={f} className={`filter-btn ${filter === f ? 'active' : ''}`}
                 onClick={() => setFilter(f)}>
-                {f.charAt(0).toUpperCase() + f.slice(1)}
+                {f === 'nidhi' ? 'Nidhi Avenue' : f.charAt(0).toUpperCase() + f.slice(1)}
               </button>
             ))}
           </div>
@@ -329,7 +329,7 @@ export function Gallery() {
                 transition={{ delay: i * 0.05, duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
                 onClick={() => setLightbox(item)}>
                 <div className="gallery-item-inner">
-                  <GalSVG index={item.id - 1} />
+                  <GalSVG index={item.id - 1} src={item.src} />
                   <div className="gallery-overlay">
                     <div className="gallery-icon">⬡</div>
                   </div>
@@ -347,7 +347,7 @@ export function Gallery() {
           <button className="lightbox-close" onClick={() => setLightbox(null)}>✕</button>
           <motion.div className="lightbox-content" initial={{ scale: 0.9 }} animate={{ scale: 1 }}
             onClick={e => e.stopPropagation()}>
-            <GalSVG index={GALLERY_ITEMS.findIndex(item => item.id === lightbox.id)} large />
+            <GalSVG index={GALLERY_ITEMS.findIndex(item => item.id === lightbox.id)} src={lightbox.src} large />
           </motion.div>
           <div className="lightbox-cap">{lightbox.label}</div>
         </motion.div>
@@ -355,22 +355,12 @@ export function Gallery() {
     </>
   )
 }
-function GalSVG({ index, large }) {
-  const images = [
-    '/gallery/g1.jpg',
-    '/gallery/g2.jpg',
-    '/gallery/g3.webp',
-    '/gallery/g4.webp',
-    '/gallery/g5.webp',
-    '/gallery/g6.jpg',
-    '/gallery/g7.webp',
-    '/gallery/g8.jpg',
-  ]
+function GalSVG({ index, src, large }) {
 
   return (
     <img
       className="gal-svg"
-      src={images[index % images.length]}
+      src={src}
       alt={`Gallery ${index + 1}`}
       style={{
         width: '100%',

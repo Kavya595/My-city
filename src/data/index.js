@@ -23,7 +23,7 @@ export const PROJECTS = {
     {
       id: 1,
       num: '01',
-      name: 'My City 4th City',
+      name: 'My City’s 4th City',
       type: 'MEGA VENTURE · 21 ACRES',
       description: 'A new capital for the next generation. 21 acres mega layout near Yacharam — adjacent to Bharath Future City, Amazon Data Center, AI City Tower and major growth hubs. 100% Vaastu designed, 30 & 40 feet roads, 1 acre resort with swimming pool, mango & coconut plantation, 24hr security. Low Investment, High Returns.',
       pdf: '/My City 4th City.pdf',
@@ -49,20 +49,20 @@ export const LEADERSHIP = [
 
 export const TESTIMONIALS = [
   { id: 1, initials: 'RS', name: 'Rajesh Sharma', role: 'Plot Owner, Warangal Highway Venture', text: 'My City Infra Developers gave me complete confidence with legally clear documents and transparent dealings. The location has appreciated significantly already.' },
-  { id: 2, initials: 'PK', name: 'Priya Kumari', role: 'Investor, My City 4th City Venture', text: 'Excellent team, very professional and honest. The plots are strategically located and the infrastructure development is exactly as promised. Highly recommend.' },
+  { id: 2, initials: 'PK', name: 'Priya Kumari', role: 'Investor, My City’s 4th City Venture', text: 'Excellent team, very professional and honest. The plots are strategically located and the infrastructure development is exactly as promised. Highly recommend.' },
   { id: 3, initials: 'MR', name: 'Mohammed Rafi', role: 'Plot Owner, Bangalore Highway Venture', text: 'I was looking for a trustworthy developer and My City Infra delivered on every promise. Legal clarity, good location, and timely development — very satisfied.' },
   { id: 4, initials: 'SR', name: 'Sunita Reddy', role: 'Investor, ORR Villa Project', text: 'The team at My City Infra is very customer-focused. They guided me through the entire process, from site visit to registration. A wonderful experience.' },
 ]
 
 export const GALLERY_ITEMS = [
-  { id: 1, label: 'Warangal Highway Venture', cat: 'ventures', aspect: 'tall' },
-  { id: 2, label: 'My City 4th City Development', cat: 'ventures', aspect: 'wide' },
-  { id: 3, label: 'ORR Villa Project', cat: 'ventures', aspect: 'tall' },
-  { id: 4, label: 'Layout Infrastructure', cat: 'ventures', aspect: 'wide' },
-  { id: 5, label: 'Bangalore Highway Venture', cat: 'ventures', aspect: 'tall' },
-  { id: 6, label: 'Batasingaram Venture', cat: 'ventures', aspect: 'wide' },
-  { id: 7, label: 'Site Development Work', cat: 'ventures', aspect: 'wide' },
-  { id: 8, label: 'ORR Exit — Amenities', cat: 'villas', aspect: 'tall' },
+  { id: 1, label: 'Warangal Highway Venture', cat: 'ventures', aspect: 'tall', src: '/gallery/g1.jpg' },
+  { id: 2, label: 'My City’s 4th City Development', cat: 'ventures', aspect: 'wide', src: '/gallery/g2.jpg' },
+  { id: 5, label: 'Bangalore Highway Venture', cat: 'ventures', aspect: 'tall', src: '/gallery/g5.webp' },
+  { id: 8, label: 'ORR Exit — Amenities', cat: 'villas', aspect: 'tall', src: '/gallery/g8.jpg' },
+  { id: 9, label: 'Nidhi Avenue — Aerial View', cat: 'nidhi', aspect: 'wide', src: '/gallery/nidhi1.jpg' },
+  { id: 10, label: 'Nidhi Avenue — Layout Overview', cat: 'nidhi', aspect: 'wide', src: '/gallery/nidhi2.jpg' },
+  { id: 11, label: 'Nidhi Avenue — Project Entrance', cat: 'nidhi', aspect: 'wide', src: '/gallery/nidhi3.jpg' },
+  { id: 12, label: 'Nidhi Avenue — Roads & Plots', cat: 'nidhi', aspect: 'wide', src: '/gallery/nidhi4.jpg' },
 ]
 
 export const SERVICES = [
@@ -83,8 +83,8 @@ export const TEAM = [
 export const TIMELINE = [
   { year: '2023', title: 'Company Founded', desc: 'My City Infra Developers was established with a vision to create high-value property investments and well-planned residential communities.' },
   { year: '2023', title: 'First Venture Launched', desc: 'Launched our first open plot layout — setting the standard for transparency, legal clarity, and quality infrastructure.' },
-  { year: '2024', title: 'Multiple Ventures', desc: 'Expanded rapidly across key growth corridors — Warangal Highway, Bangalore Highway, My City 4th City Zone, and ORR Exit 12.' },
-  { year: '2024', title: 'Batasingaram Venture', desc: 'Launched the prime Vijayawada Highway – Batasingaram Venture offering high-growth residential plots.' },
+  { year: '2024', title: 'Multiple Ventures', desc: 'Expanded rapidly across key growth corridors — Warangal Highway, Bangalore Highway, My City’s 4th City Zone, and ORR Exit 12.' },
+  { year: '2024', title: 'Sravan Township - Batasingaram', desc: 'Launched the prime Vijayawada Highway venture, the Sravan Township - Batasingaram offering high-growth residential plots.' },
   { year: '2025', title: 'Growing Community', desc: 'Serving a growing community of investors and homeowners across Hyderabad with trust, transparency and quality.' },
   { year: '2026', title: 'My City, Your Future', desc: 'Continuing our mission to help customers secure a better future through smart real estate investments and sustainable communities.' },
 ]
