@@ -1,0 +1,87 @@
+.wa-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 8000;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  animation: waWave 4s ease-in-out infinite;
+  transition: transform 0.4s var(--ease2), box-shadow 0.4s;
+}
+
+.wa-float:hover {
+  transform: scale(1.12) rotate(5deg) !important;
+  box-shadow: 0 12px 48px rgba(37, 211, 102, 0.6);
+  animation: none;
+}
+
+@keyframes waWave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.wa-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.5);
+  animation: waPulse 2s ease-out infinite;
+}
+
+@keyframes waPulse {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(1.5); opacity: 0; }
+}
+
+.wa-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 20px;
+  height: 20px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.wa-tooltip {
+  position: absolute;
+  right: 72px;
+  bottom: 50%;
+  transform: translateY(50%);
+  background: var(--dark2);
+  border: 1px solid var(--border);
+  color: var(--white);
+  padding: 8px 16px;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease2);
+  pointer-events: none;
+}
+
+.wa-float:hover .wa-tooltip { opacity: 1; }
+
+.wa-tooltip::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-left-color: var(--border);
+}
